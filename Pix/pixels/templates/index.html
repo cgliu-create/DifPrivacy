@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Differential Privacy</title>
+  </head>
+  <body>
+    <h1>Basic Differential Privacy</h1>
+    {% load static %}
+    <img id="original" src="{%static '/images/osu.png' %}" style="display: none;">
+    <canvas id="canvas" width="300" height="300"></canvas>
+    <form>
+		<input type="radio" id="original" name="color" value="original" checked>
+  		<label for="original">Original</label>
+
+		<input type="radio" id="coindif" name="color" value="coindif">
+  		<label for="coindif">CoinDif(50%, 50%)</label>
+    </form>
+    <pre>
+        <code>
+    function randomizedResponse(trueval, alpha, beta){
+        if (Math.random() < alpha){
+            return trueval;
+        } else if (Math.random() < beta){
+            return 0;
+        } else {
+            return 1;
+        }
+    }
+        </code>
+    </pre>
+    <button id="Generate">Generate</button>
+    <table id="GenerateTable">
+    </table>
+    
+    {% load static %}
+    <script src="{%static '/js/pixel.js' %}"></script>
+    <style>
+        pre code {
+            background-color: #eee;
+            border: 1px solid #999;
+            display: block;
+            padding: 10px;
+        }
+    </style>
+  </body>
+</html>
