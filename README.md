@@ -89,10 +89,6 @@ the probability of the randomized response is a randomized 1 = e^ε
 For alpha = 0.50 and beta = 0.50, ε = ln(3)
 
 
-## Laplace - Differential Privacy
-
-... using Laplace mechanism
-
 ### Installation
 
 ```bash
