@@ -71,7 +71,7 @@ S is the set of possible outputs from M
 
 x is from dataset n
 
-y is from dataset n-1
+y is from dataset n-1 (without x)
 
 ε is the maximum distance between two randomized responses
 
