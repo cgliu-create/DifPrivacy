@@ -29,6 +29,20 @@
     }
         </code>
     </pre>
+    <pre>
+        <code>
+    // pseudo code for image manipulations
+    <b>for</b> each pixel (r,g,b) in ImageData <b>do</b>
+        testVal ← -1
+        testVal ← randomizedResponse(testVal, alpha, beta) 
+        <b>if</b> testVal equals 0 <b>do</b>
+            (r,g,b) ← (255,255,255) // replace with white pixel
+        <b>else if</b> testVal equals 1 <b>do</b> 
+            (r,g,b) ← (0,0,0)       // replace with black pixel
+        <b>else</b>
+            // -1, keep original black or white pixel
+        </code>
+    </pre>
     <button id="Generate">Generate</button>
     <table id="GenerateTable">
     </table>
