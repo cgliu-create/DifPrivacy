@@ -1,8 +1,10 @@
 # DifPrivacy
 ## Pix - Basic Differential Privacy
 
-<img width="313" alt="osu1" src="https://user-images.githubusercontent.com/59263349/143376501-bc4e476d-62e3-4413-a470-b5c5fc26735c.png">
-<img width="313" alt="osu2" src="https://user-images.githubusercontent.com/59263349/143376510-961feb41-dac4-4811-b1b9-7909c23eab46.png">
+<p float="left">
+  <img width="313" alt="osu1" src="https://user-images.githubusercontent.com/59263349/143376501-bc4e476d-62e3-4413-a470-b5c5fc26735c.png">
+   <img width="313" alt="osu2" src="https://user-images.githubusercontent.com/59263349/143376510-961feb41-dac4-4811-b1b9-7909c23eab46.png">
+</p>  
 
 Pix is a simple Django website that visualizes some basic differential privacy. The website shows an image composed of black and white pixels. It depicts the trade-off of accuracy and privacy as you increase the noise.
 
