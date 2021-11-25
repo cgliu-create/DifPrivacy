@@ -3,8 +3,9 @@
 
 <p float="left">
   <img width="313" alt="osu1" src="https://user-images.githubusercontent.com/59263349/143376501-bc4e476d-62e3-4413-a470-b5c5fc26735c.png">
-   <img width="313" alt="osu2" src="https://user-images.githubusercontent.com/59263349/143376510-961feb41-dac4-4811-b1b9-7909c23eab46.png">
+  <img width="313" alt="osu2" src="https://user-images.githubusercontent.com/59263349/143376510-961feb41-dac4-4811-b1b9-7909c23eab46.png">
 </p>  
+
 
 Pix is a simple Django website that visualizes some basic differential privacy. The website shows an image composed of black and white pixels. It depicts the trade-off of accuracy and privacy as you increase the noise.
 
@@ -38,6 +39,7 @@ for each pixel (r,g,b) in ImageData do
 
 <img width="294" alt="1" src="https://user-images.githubusercontent.com/59263349/143334339-c7d7bbd6-8f13-4862-ae1d-19e214e9bbb1.png">
 
+
 Here, **proportion of black pixels in the modified image = alpha * proportion of black pixels in the original image + (1 - alpha) * beta**.
 
 where **alpha * proportion of black pixels in the original image** is the proportion of black pixels that are from the original image
@@ -46,9 +48,11 @@ where **(1 - alpha) * beta** is the proportion of black pixels that are random
 
 <img width="295" alt="2" src="https://user-images.githubusercontent.com/59263349/143334601-bbffe4d3-01f5-4f35-97a5-44460ebea786.png">
 
+
 Therefore, **proportion of black pixels in the original image = (proportion of black pixels in the modified image - proportion of black pixels that are random)/alpha**
 
 <img width="245" alt="3" src="https://user-images.githubusercontent.com/59263349/143334624-27342f39-d452-48cb-9520-d170682b3a4c.png">
+
 
 This proportion could be estimated by taking a sample of the pixels. If the black and white pixels represented "yes" and "no" in a survey, we would be estimating a response proportion while obfuscating the responses for privacy.
 
@@ -57,13 +61,19 @@ This fulfills the condition for the differential privacy formula:
 
 <img width="398" alt="4" src="https://user-images.githubusercontent.com/59263349/143376067-951edca1-7232-45a4-9720-056d8bb1821b.png">
 
+
 Where M is the randomized response mechanism 
+
 S is the set of possible outputs from M
+
 x is from dataset n
+
 y is from dataset n-1
+
 ε is the maximum distance between two randomized responses
 
 <img width="287" alt="5" src="https://user-images.githubusercontent.com/59263349/143376105-68843a9d-b170-4775-ae93-004c9211ce74.png">
+
 
 Finding ε:
 
@@ -71,6 +81,7 @@ the probability of the randomized response is correctly 1 /
 the probability of the randomized response is a randomized 1 = e^ε
 
 <img width="293" alt="6" src="https://user-images.githubusercontent.com/59263349/143376165-baed380a-d954-4935-ab47-04989fccad51.png">
+
 
 For alpha = 0.50 and beta = 0.50, ε = ln(3)
 
