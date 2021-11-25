@@ -2,14 +2,17 @@
 ## Pix - Basic Differential Privacy
 
 <p float="left">
-  <img width="313" alt="osu1" src="https://user-images.githubusercontent.com/59263349/143376501-bc4e476d-62e3-4413-a470-b5c5fc26735c.png">
-  <img width="313" alt="osu2" src="https://user-images.githubusercontent.com/59263349/143376510-961feb41-dac4-4811-b1b9-7909c23eab46.png">
+  <img width="287" alt="01" src="https://user-images.githubusercontent.com/59263349/143482682-4b2190e2-c88e-4c0b-966a-f4013e2818c1.png">
+  <img width="287" alt="02" src="https://user-images.githubusercontent.com/59263349/143482689-3ee83f48-07ca-4a0b-b44e-39555fbb6ac2.png">
+  <img width="289" alt="03" src="https://user-images.githubusercontent.com/59263349/143482704-a975070e-8d4f-43f7-89d7-2e1ae3a982f6.png">
+
 </p>  
 
 
 Pix is a simple Django website that visualizes some basic differential privacy. The website shows an image composed of black and white pixels. It depicts the trade-off of accuracy and privacy as you increase the noise.
 
-<img width="428" alt="comp" src="https://user-images.githubusercontent.com/59263349/143378074-18ccf2d5-d46f-42c7-93ca-4cd8d531ad8e.png">
+
+<img width="685" alt="04" src="https://user-images.githubusercontent.com/59263349/143482733-b59d2f1d-91b8-4015-88b3-609482ee9557.png">
 
 
 In the Coin Differential, you flip a coin once. If the coin is Heads, then you use the correct black or white pixel. If the coin is Tails, then you flip a second coin. If the second coin is Heads, replace the original pixel with a black pixel. If the second coin is Tails, replace the original pixel with a white pixel.  
