@@ -47,6 +47,26 @@ Therefore, **proportion of black pixels in the original image = (proportion of b
 
 This proportion could be estimated by taking a sample of the pixels. If the black and white pixels represented "yes" and "no" in a survey, we would be estimating a response proportion while obfuscating the responses for privacy.
 
+Since 1 = black pixel and 0 = white pixel, the difference between any two pixels values is <= 1.
+This fulfills the condition for the differential privacy formula:
+
+<img width="398" alt="4" src="https://user-images.githubusercontent.com/59263349/143376067-951edca1-7232-45a4-9720-056d8bb1821b.png">
+
+Where M is the randomized response mechanism 
+S is the set of possible outputs from M
+x is from dataset n
+y is from dataset n-1
+ε is the maximum distance between two randomized responses
+
+<img width="287" alt="5" src="https://user-images.githubusercontent.com/59263349/143376105-68843a9d-b170-4775-ae93-004c9211ce74.png">
+
+Finding ε:
+the probability of the randomized response is correctly 1 / 
+the probability of the randomized response is a randomized 1 = e^ε
+
+<img width="293" alt="6" src="https://user-images.githubusercontent.com/59263349/143376165-baed380a-d954-4935-ab47-04989fccad51.png">
+
+For alpha = 0.50 and beta = 0.50, ε = ln(3)
 
 ### Installation
 
