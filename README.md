@@ -73,7 +73,7 @@ x is from dataset n
 
 y is from dataset n-1 (without x)
 
-ε is the maximum distance between two randomized responses
+ε privacy parameter
 
 <img width="287" alt="5" src="https://user-images.githubusercontent.com/59263349/143376105-68843a9d-b170-4775-ae93-004c9211ce74.png">
 
