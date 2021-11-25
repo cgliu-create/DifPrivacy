@@ -15,9 +15,9 @@ function randomizedResponse(trueval, alpha, beta){
     if (Math.random() < alpha){
         return trueval;
     } else if (Math.random() < beta){
-        return 0;
-    } else {
         return 1;
+    } else {
+        return 0;
     }
 }
 
@@ -28,14 +28,14 @@ var difimage = function(the_ctxt, the_canvas, the_img, the_alpha, the_beta) {
 	for (var i = 0; i < data.length; i += 4) {
         let t = -1;
         t = randomizedResponse(-1, the_alpha, the_beta);
-        if (t == 0) { // replace with white pixel
-            data[i] = 255;      // r
-            data[i + 1] = 255;  // g
-            data[i + 2] = 255;  // b
-        } else if (t == 1){ // replace with black pixel
-            data[i] = 0;        // r
-            data[i + 1] = 0;    // g
-            data[i + 2] = 0;    // b
+        if (t == 1) { // replace with black pixel
+            data[i] = 0;      // r
+            data[i + 1] = 0;  // g
+            data[i + 2] = 0;  // b
+        } else if (t == 0){ // replace with white pixel
+            data[i] = 255;        // r
+            data[i + 1] = 255;    // g
+            data[i + 2] = 255;    // b
         } else { // keep original black or white pixel
         }
 	}
