@@ -1,6 +1,9 @@
 # DifPrivacy
 ## Pix - Basic Differential Privacy
 
+<img width="313" alt="osu1" src="https://user-images.githubusercontent.com/59263349/143376501-bc4e476d-62e3-4413-a470-b5c5fc26735c.png">
+<img width="313" alt="osu2" src="https://user-images.githubusercontent.com/59263349/143376510-961feb41-dac4-4811-b1b9-7909c23eab46.png">
+
 Pix is a simple Django website that visualizes some basic differential privacy. The website shows an image composed of black and white pixels. It depicts the trade-off of accuracy and privacy as you increase the noise.
 
 In the Coin Differential, you flip a coin once. If the coin is Heads, then you use the correct black or white pixel. If the coin is Tails, then you flip a second coin. If the second coin is Heads, replace the original pixel with a black pixel. If the second coin is Tails, replace the original pixel with a white pixel.  
@@ -61,6 +64,7 @@ y is from dataset n-1
 <img width="287" alt="5" src="https://user-images.githubusercontent.com/59263349/143376105-68843a9d-b170-4775-ae93-004c9211ce74.png">
 
 Finding ε:
+
 the probability of the randomized response is correctly 1 / 
 the probability of the randomized response is a randomized 1 = e^ε
 
