@@ -104,3 +104,5 @@ git clone <this repository>
 cd Pix
 python3 manage.py runserver   
 ```
+
+check out https://robertovitillo.com/differential-privacy-for-dummies/ for more
