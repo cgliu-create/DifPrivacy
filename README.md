@@ -9,6 +9,9 @@
 
 Pix is a simple Django website that visualizes some basic differential privacy. The website shows an image composed of black and white pixels. It depicts the trade-off of accuracy and privacy as you increase the noise.
 
+<img width="428" alt="comp" src="https://user-images.githubusercontent.com/59263349/143378074-18ccf2d5-d46f-42c7-93ca-4cd8d531ad8e.png">
+
+
 In the Coin Differential, you flip a coin once. If the coin is Heads, then you use the correct black or white pixel. If the coin is Tails, then you flip a second coin. If the second coin is Heads, replace the original pixel with a black pixel. If the second coin is Tails, replace the original pixel with a white pixel.  
 
 For the Coin Differential, alpha = 0.50 and beta = 0.50.
