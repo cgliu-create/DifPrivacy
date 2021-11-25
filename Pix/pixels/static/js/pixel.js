@@ -61,6 +61,7 @@ button.addEventListener("click", ()=>{
     for (let i = 0; i <= 10; i++) {
         let alphapercent = i * 10;
         let alpha = alphapercent / 100;
+        let beta = 0.5;
 
         let newRow = table.insertRow(-1);
         let newCell1 = newRow.insertCell(0);
@@ -72,8 +73,13 @@ button.addEventListener("click", ()=>{
         newCanvas.width = canvas.width;
         newCanvas.height = canvas.height;
         var newCtxt = newCanvas.getContext('2d'); 
-        difimage(newCtxt, newCanvas, img, alpha, 0.5);
-        newCell2.appendChild(newCanvas); 
-
+        difimage(newCtxt, newCanvas, img, alpha, beta);
+        newCell2.appendChild(newCanvas);
+        
+        let newCell3 = newRow.insertCell(2);
+        let c = alpha + (1-alpha)*beta;
+        let difval = Math.log(c/(1-c));
+        let newText2 = document.createTextNode(`ε = ${difval}`);
+        newCell3.appendChild(newText2);
     }
 })
