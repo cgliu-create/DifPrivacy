@@ -224,7 +224,6 @@ button.addEventListener("click", ()=>{
         let newCell1 = newRow.insertCell(0);
         let c = alpha + (1-alpha)*beta;
         let difval = Math.log(c/(1-c));
-        let newText2 = document.createTextNode(``);
         newCell1.innerHTML = `${alphapercent}%, 50% <br> ε = ${difval.toPrecision(4)}`;
 
         let newCell2 = newRow.insertCell(1);
