@@ -93,7 +93,7 @@ the probability of the randomized response is a randomized 1 = e^ε
 
 For alpha = 0.50 and beta = 0.50, ε = ln(3)
 
-The smaller the ε value, the more randomness/noise, the more privacy.
+A smaller ε will yield better privacy but a less accurate response.
 
 ### Installation
 
