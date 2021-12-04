@@ -78,6 +78,8 @@ y is from dataset n-1 (without x)
 
 ε is the privacy parameter
 
+The differential privacy formula means that if the data of one individual is removed, the probability of the output with the dataset is close to the probability of the same output with the dataset that still has the individual. This allows us to extract meaningful information from the datasets without needing to know the exact information of an individual.
+
 <img width="287" alt="5" src="https://user-images.githubusercontent.com/59263349/143376105-68843a9d-b170-4775-ae93-004c9211ce74.png">
 
 
@@ -91,6 +93,7 @@ the probability of the randomized response is a randomized 1 = e^ε
 
 For alpha = 0.50 and beta = 0.50, ε = ln(3)
 
+The smaller the ε value, the more randomness/noise, the more privacy.
 
 ### Installation
 
