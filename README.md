@@ -1,5 +1,19 @@
 # DifPrivacy
-## Pix - Basic Differential Privacy
+
+Differential privacy: a system for extracting meaningful information from a dataset while withholding information about individuals in the dataset. It works by adding statistical noise to the data (either to their inputs-locally or the output-globally).
+
+## NoisyAverage.py - Basic Differential Privacy
+
+Suppose we want to know the average amount of money an individual has in their pocket.
+However, people are uncomfortable with sharing the exact number they have.
+Therefore, we ask the individuals to add a random number (-100 to 100) to the amount that they hold and give us the result.
+This adds noise/randomness to responses, hiding the exact personal information of individuals.
+Now, using the law of large numbers, if we have a sufficiently large sample size, the noise cancels out and we can find the true population average. 
+
+<img width="600" alt="x" src="https://user-images.githubusercontent.com/59263349/144721929-7452768a-73cf-425e-aeb7-6bd3a57ca6d9.png">
+
+
+## Pix - Local Differential Privacy
 
 <p float="left">
   <img width="287" alt="01" src="https://user-images.githubusercontent.com/59263349/143482682-4b2190e2-c88e-4c0b-966a-f4013e2818c1.png">
