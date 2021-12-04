@@ -15,6 +15,8 @@ Now, using the law of large numbers, if we have a sufficiently large sample size
 
 ## Pix - Local Differential Privacy
 
+Noise is added to individual data points, represented by pixels.
+
 <p float="left">
   <img width="287" alt="01" src="https://user-images.githubusercontent.com/59263349/143482682-4b2190e2-c88e-4c0b-966a-f4013e2818c1.png">
   <img width="287" alt="02" src="https://user-images.githubusercontent.com/59263349/143482689-3ee83f48-07ca-4a0b-b44e-39555fbb6ac2.png">
