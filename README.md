@@ -109,7 +109,7 @@ the probability of the randomized response is a randomized 1 = e^ε
 
 For alpha = 0.50 and beta = 0.50, ε = ln(3)
 
-A smaller ε will yield better privacy but a less accurate response.
+A smaller ε will yield better privacy but a less accurate response. ε becomes smaller as alpha, the proportion of data that is not randomized, decreases. As ε becomes smaller, exp(ε) or e^ε gets closer to 1. The probability of the output with the dataset without an individual is same as the probability of the same output with the dataset that still has the individual because both datasets are now completely randomized and meaningless.
 
 ### Installation
 
