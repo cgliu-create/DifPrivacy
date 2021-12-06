@@ -143,11 +143,52 @@ Therefore, we decide to add a randomized error amount with a known distribution.
 This allows us hide the exact number while also allowing the other party to know that 
 it is in a certain range with a level of confidence.
 
-* Note we like working with values between 0 and 1
+* Note we like working with values between 0 and 1, it is necessary for our differential privacy formula
 
 <img width="551" alt="o" src="https://user-images.githubusercontent.com/59263349/144889976-ea6f52ac-2097-4ff8-abc8-a7fcd842de38.png">
 
 <img width="585" alt="dst" src="https://user-images.githubusercontent.com/59263349/144890004-a2730262-44e1-4ae2-b96e-b0c78c4bf7e2.png">
+
+<img width="322" alt="l1" src="https://user-images.githubusercontent.com/59263349/144902254-1ae30e80-bc2d-4c78-a004-ad297e276f60.png">
+Here is the probability density function of a Laplace Distribution. 
+
+Where v is the randomized error amount
+
+b is the scale coef for how wide/steep the distribution is
+
+∆f is the sensitivity of the query (ex: average) that we are doing on the dataset i.e. what is the max change from removing one individual?
+
+ε is the privacy parameter
+
+For the laplace distribution, the expected error amount, E(v) = 0 and the variance Var(v) = 2 * b ^2
+
+Decreasing ε, increases b, increasing the variance, making the dist wider and less steep. Therefore, a smaller ε will yield better privacy but a less accurate response.
+
+<img width="502" alt="l2" src="https://user-images.githubusercontent.com/59263349/144904739-57dfbe41-5e0c-47d6-9d2e-2ce67bdcb096.png">
+
+The Laplace Mechanism adds some randomized error v to some query f on some dataset
+
+<img width="666" alt="l3" src="https://user-images.githubusercontent.com/59263349/144905102-70d59021-ff4e-4759-8b84-cc625bad6dbe.png">
+
+The sensitivity depends on the query operation. For average, the max ∆f = 1/n
+
+Analyzing average: (∑ without X individual + X individual) / n  - (∑ without X individual) / (n-1)
+
+Given an X individual is between 0 and 1, ∑X individuals is between 0 and ∞. 
+
+Looking at the extremes:
+
+(0 + 0)/n - 0/(n-1) = 0, (0 + 1)/n - 0/(n-1) = 1/n, (∞ + 0)/n - ∞/(n-1) = 0, (∞ + 1)/n - ∞/(n-1) = 0
+
+Therefore, the max ∆f = 1/n
+
+<img width="502" alt="l4" src="https://user-images.githubusercontent.com/59263349/144906909-66263045-28d2-4cdd-a20d-5dff69b6f168.png">
+
+<img width="693" alt="l5" src="https://user-images.githubusercontent.com/59263349/144906939-332d6fde-ae0f-4453-97d2-d5c34b585625.png">
+
+The differential privacy formula means that if the data of one individual is removed, the probability of the output with the dataset is close to the probability of the same output with the dataset that still has the individual. In this situation, we can find the probability of a specific output, o from the laplace mechanism given that the center of the distribution is the query from the dataset with an individual or the query from the dataset wihout the an individual. 
+
+This allows us to extract meaningful information from the datasets without needing to know the exact information individuals.
 
 ### Installation
 
@@ -161,6 +202,8 @@ git clone <this repository>
 cd <this repository>
 python3 Laplace.py
 ```
+<hr>
+
 https://robertovitillo.com/differential-privacy-for-dummies/
 
 https://becominghuman.ai/what-is-differential-privacy-1fd7bf507049
