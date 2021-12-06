@@ -1,6 +1,7 @@
 import math
 import random
 import numpy as np
+import matplotlib.pyplot as plt
 
 """
 Suppose we want to know the average proportion of some behavior.
@@ -60,6 +61,9 @@ noisyavg = trueavg + np.random.default_rng().laplace(0, b)
 print(f"Laplace RV for noise: center=0, scale={b}")
 print(f"Noisy average: {noisyavg}")
 
+dif = noisyavg -  trueavg
+print(f"Error amount: {dif}")
+
 variance = 2 * math.pow(b, 2)
 stdev = math.sqrt(variance)
 
@@ -88,3 +92,33 @@ b = ∆f / ε
 so exp( |f(d) − f(d')| / b ) = exp(ε) 
 The ratio of the two probabilities ≤ exp(ε) which fulfills the conditions for ε-Differential Privacy
 """
+
+# Create the vectors X and Y
+def lap(x):
+    return 1 / (2 * b) * math.exp( - abs(x) / b)
+
+x = np.array(np.arange(-0.1, 0.1, 0.0001))
+vector = np.vectorize(lap)
+y = vector(x)
+
+def errlap(x):
+    return 1 / (2 * b) * math.exp( - abs(x - dif) / b)
+
+xe = np.array(np.arange(dif-0.1, dif+0.1, 0.0001))
+evector = np.vectorize(errlap)
+ye = evector(xe)
+
+# Create the plot
+plt.plot(x,y)
+plt.plot(xe,ye)
+plt.legend(["From error 0", "From noise error"])
+
+# Add a title
+plt.title('The Laplace Dist')
+
+# Add X and y Label
+plt.xlabel('x axis - error amount')
+plt.ylabel('y axis - prob density')
+
+# Show the plot
+plt.show()
