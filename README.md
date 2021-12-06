@@ -178,7 +178,10 @@ Given an X individual is between 0 and 1, ∑X individuals is between 0 and ∞.
 
 Looking at the extremes:
 
-(0 + 0)/n - 0/(n-1) = 0, (0 + 1)/n - 0/(n-1) = 1/n, (∞ + 0)/n - ∞/(n-1) = 0, (∞ + 1)/n - ∞/(n-1) = 0
+(0 + 0)/n - 0/(n-1) = 0,
+(0 + 1)/n - 0/(n-1) = 1/n, 
+(∞ + 0)/n - ∞/(n-1) = 0, 
+(∞ + 1)/n - ∞/(n-1) = 0,
 
 Therefore, the max ∆f = 1/n
 
@@ -188,7 +191,7 @@ Therefore, the max ∆f = 1/n
 
 The differential privacy formula means that if the data of one individual is removed, the probability of the output with the dataset is close to the probability of the same output with the dataset that still has the individual. In this situation, we can find the probability of a specific output, o from the laplace mechanism given that the center of the distribution is the query from the dataset with an individual or the query from the dataset wihout the an individual. 
 
-This allows us to extract meaningful information from the datasets without needing to know the exact information individuals.
+This allows us to extract meaningful information from the datasets without needing to know the exact information of individuals.
 
 ### Installation
 
