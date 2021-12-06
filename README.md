@@ -178,11 +178,10 @@ Given an X individual is between 0 and 1, ∑X individuals is between 0 and ∞.
 
 Looking at the extremes:
 
-(0 + 0)/n - 0/(n-1) = 0,
-(0 + 1)/n - 0/(n-1) = 1/n, 
-(∞ + 0)/n - ∞/(n-1) = 0, 
-(∞ + 1)/n - ∞/(n-1) = 0,
-
+(0 + 0)/n - 0/(n-1) = 0, <br />
+(0 + 1)/n - 0/(n-1) = 1/n, <br />
+(∞ + 0)/n - ∞/(n-1) = 0, <br />
+(∞ + 1)/n - ∞/(n-1) = 0, <br />
 Therefore, the max ∆f = 1/n
 
 <img width="502" alt="l4" src="https://user-images.githubusercontent.com/59263349/144906909-66263045-28d2-4cdd-a20d-5dff69b6f168.png">
