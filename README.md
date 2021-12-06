@@ -133,7 +133,9 @@ it is in a certain range with a level of confidence.
 
 * Note we like working with values between 0 and 1
 
-<img width="455" alt="l" src="https://user-images.githubusercontent.com/59263349/144878229-02a0ccc5-62d0-4456-b0ff-0f678ed712e5.png">
+<img width="551" alt="o" src="https://user-images.githubusercontent.com/59263349/144889976-ea6f52ac-2097-4ff8-abc8-a7fcd842de38.png">
+
+<img width="585" alt="dst" src="https://user-images.githubusercontent.com/59263349/144890004-a2730262-44e1-4ae2-b96e-b0c78c4bf7e2.png">
 
 
 https://robertovitillo.com/differential-privacy-for-dummies/
