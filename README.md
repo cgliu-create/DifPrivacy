@@ -124,4 +124,17 @@ cd Pix
 python3 manage.py runserver   
 ```
 
-check out https://robertovitillo.com/differential-privacy-for-dummies/ for more
+## Laplace.py - Global Differential Privacy
+Suppose we want to know the average proportion of some behavior.
+But, for some reason we don't want to tell the true average to some third party.
+Therefore, we decide to add a randomized error amount with a known distribution.
+This allows us hide the exact number while also allowing the other party to know that 
+it is in a certain range with a level of confidence.
+
+* Note we like working with values between 0 and 1
+
+<img width="455" alt="l" src="https://user-images.githubusercontent.com/59263349/144878229-02a0ccc5-62d0-4456-b0ff-0f678ed712e5.png">
+
+
+https://robertovitillo.com/differential-privacy-for-dummies/
+https://becominghuman.ai/what-is-differential-privacy-1fd7bf507049
