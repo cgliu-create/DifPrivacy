@@ -137,4 +137,7 @@ it is in a certain range with a level of confidence.
 
 
 https://robertovitillo.com/differential-privacy-for-dummies/
+
 https://becominghuman.ai/what-is-differential-privacy-1fd7bf507049
+
+https://www.seas.upenn.edu/~cis399/files/lecture/l21.pdf
