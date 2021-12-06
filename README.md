@@ -12,6 +12,18 @@ Now, using the law of large numbers, if we have a sufficiently large sample size
 
 <img width="600" alt="x" src="https://user-images.githubusercontent.com/59263349/144721929-7452768a-73cf-425e-aeb7-6bd3a57ca6d9.png">
 
+### Installation
+
+```bash
+git clone <this repository>
+```
+
+### Usage
+
+```bash
+cd <this repository>
+python3 NoisyAverage.py
+```
 
 ## Pix - Local Differential Privacy
 
@@ -120,7 +132,7 @@ git clone <this repository>
 ### Usage
 
 ```bash
-cd Pix
+cd <this repository>/Pix
 python3 manage.py runserver   
 ```
 
@@ -137,7 +149,18 @@ it is in a certain range with a level of confidence.
 
 <img width="585" alt="dst" src="https://user-images.githubusercontent.com/59263349/144890004-a2730262-44e1-4ae2-b96e-b0c78c4bf7e2.png">
 
+### Installation
 
+```bash
+git clone <this repository>
+```
+
+### Usage
+
+```bash
+cd <this repository>
+python3 Laplace.py
+```
 https://robertovitillo.com/differential-privacy-for-dummies/
 
 https://becominghuman.ai/what-is-differential-privacy-1fd7bf507049
